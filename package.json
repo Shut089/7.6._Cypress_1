@@ -7,8 +7,12 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "cy:laptop": "npx cypress open --config-file cypress.laptop.js",
+  "cy:mobile": "npx cypress open --config-file cypress.mobile.js",
+  "cy:laptop:run": "npx cypress run --config-file cypress.laptop.js",
+  "cy:mobile:run": "npx cypress run --config-file cypress.mobile.js"
+},
   "dependencies": {
     "cypress": "^15.13.1"
   }
