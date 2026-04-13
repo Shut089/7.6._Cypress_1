@@ -8,10 +8,16 @@
   "main": "index.js",
   "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1",
-  "cy:laptop": "npx cypress open --config-file cypress.laptop.js",
-  "cy:mobile": "npx cypress open --config-file cypress.mobile.js",
-  "cy:laptop:run": "npx cypress run --config-file cypress.laptop.js",
-  "cy:mobile:run": "npx cypress run --config-file cypress.mobile.js"
+
+  "cy:laptop:headed:chrome": "npx cypress open --config-file cypress.laptop.js --browser chrome",
+  "cy:laptop:headless:chrome": "npx cypress run --config-file cypress.laptop.js --browser chrome",
+  "cy:laptop:headed:firefox": "npx cypress open --config-file cypress.laptop.js --browser firefox",
+  "cy:laptop:headless:firefox": "npx cypress run --config-file cypress.laptop.js --browser firefox",
+
+  "cy:mobile:headed:chrome": "npx cypress open --config-file cypress.mobile.js --browser chrome",
+  "cy:mobile:headless:chrome": "npx cypress run --config-file cypress.mobile.js --browser chrome",
+  "cy:mobile:headed:firefox": "npx cypress open --config-file cypress.mobile.js --browser firefox",
+  "cy:mobile:headless:firefox": "npx cypress run --config-file cypress.mobile.js --browser firefox"
 },
   "dependencies": {
     "cypress": "^15.13.1"

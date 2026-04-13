@@ -14,6 +14,13 @@ it('login test', () => {
     cy.contains('Добро пожаловать ' + Cypress.env('email'));
   });
 
+  // Проверка входав раздел "избранное".
+it('Add to favorite', function() {
+  cy.contains('Добро пожаловать test@test.com');
+  cy.contains('Favorite').click();
+  cy.contains('Please add some book to favorit on home page');
+});
+
   //Добавление к книге с отметкой в "избранную". 
 it('Add book test favorite', function() {
 cy.contains('Add new').click();
